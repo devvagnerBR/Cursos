@@ -1,0 +1,3 @@
+[submodule "typescript-one-bit-code"]
+	path = typescript-one-bit-code
+	url = https://github.com/devvagnerBR/typescript-one-bit-code.git

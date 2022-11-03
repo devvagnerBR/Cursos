@@ -1,0 +1,16 @@
+{
+	"name": "exercicio-criando-interfaces",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"tsc-watch": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"axios": "^1.1.3",
+		"typescript": "^4.8.4"
+	}
+}
