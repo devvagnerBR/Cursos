@@ -1,0 +1,22 @@
+{
+	"name": "alura-cases-divulgacao",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"export": "next build && next export",
+		"lint": "next lint"
+	},
+	"keywords": [],
+	"author": "wagner-guimaraes",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.0.0",
+		"next": "^12.3.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}
