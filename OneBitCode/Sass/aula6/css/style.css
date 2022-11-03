@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn, .btn-roxo {
+  width: 155px;
+  height: 60px;
+  padding: 10px 0px;
+  border-radius: 2px;
+  display: block;
+}
+.btn.btn-amarelo, .btn-amarelo.btn-roxo {
+  background: yellow;
+  color: black;
+}
+.btn.btn-azul, .btn-azul.btn-roxo {
+  background: blue;
+  color: white;
+}
+
+.btn-roxo {
+  background: purple;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

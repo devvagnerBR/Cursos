@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	gap: 20px;
+}
+
+.btn {
+	width: 155px;
+	height: 60px;
+	padding: 10px 0px;
+	border-radius: 2px;
+	display: block;
+
+	&.btn-amarelo {
+		background: yellow;
+		color: black;
+	}
+
+	&.btn-azul {
+		background: blue;
+		color: white;
+	}
+}
+
+.btn-roxo {
+    @extend .btn;
+	background: purple;
+	color: white;
+}
