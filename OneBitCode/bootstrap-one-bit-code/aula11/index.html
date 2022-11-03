@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--LINK BOOTSTRAP-->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+	<!-- BOOTSTRAP ICONS-->
+	<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+	<title>aula 11 - avisos e alerts</title>
+</head>
+
+<body>
+
+	<div>
+
+
+		<div class="alert alert-success text-center mt-5" role="alert">
+			item adicionado com sucesso ao carrinho
+		</div>
+		<div class="alert alert-danger text-center" role="alert">
+			usuário ou senha não encontrados
+		</div>
+
+		<div id="liveAlertPlaceholder">Está gostando da OneBitCode? (Aqui o bootstrap fornece o JavaScript)</div>
+		<button type="button" class="btn btn-primary mt-5" id="liveAlertBtn">Sim!</button>
+
+	</div>
+            
+	<div class="alert alert-dark alert-dismissible fade show mt-5" role="alert">
+		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	
+			
+	<script>
+		var alertPlaceholder = document.getElementById( 'liveAlertPlaceholder' )
+		var alertTrigger = document.getElementById( 'liveAlertBtn' )
+
+		function alert( message, type ) {
+			var wrapper = document.createElement( 'div' )
+			wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+			alertPlaceholder.append( wrapper )
+		}
+
+		if ( alertTrigger ) {
+			alertTrigger.addEventListener( 'click', function () {
+				alert( 'Muito bom programador, você vai ter muito sucesso na carreira!', 'success' )
+			} )
+		}
+	</script>
+</body>
+
+</html>

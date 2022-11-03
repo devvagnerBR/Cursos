@@ -1,0 +1,31 @@
+body {
+	background: grey;
+}
+
+.img-class img {
+	width: 250px;
+}
+
+section {
+	background: rgb(209, 58, 58);
+	color: white;
+}
+
+/* 
+padding geral = p-3
+padding-top|bottom = py-3  3= 3rem
+padding-left|right = px-3
+
+pt - padding top
+pb - padding bottom
+ps - padding start
+pe - padding end
+
+margin geral = m-3
+margin-top|bottom = my-3
+margin-left|right = mx-3
+
+df = display:flex
+d-block = display:block
+d-none = display: none;
+*/

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--LINK BOOTSTRAP-->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- BOOTSTRAP ICONS-->
+	<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+
+	<title>aula 15 - OFF Canvas</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>League of Legends 2 <span class="badge bg-primary">NOVO</span></h1>
+
+		<button type="button" class="btn btn-warning">
+			Notifications <span class="badge bg-light text-dark">4</span>
+		</button>
+
+		<button type="button" class="btn-close btn-close-dark" aria-label="Close"></button>
+
+		<div class="container pt-5">
+			<p>
+				<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+					aria-expanded="false" aria-controls="collapseExample">
+					Link with href
+				</a>
+			</p>
+			<div class="collapse" id="collapseExample">
+				<div class="card card-body">
+					Some placeholder content for the collapse component. This panel is hidden by default but revealed
+					when
+					the user activates the relevant trigger.
+				</div>
+			</div>
+		</div>
+
+		<!-- Example single danger button -->
+		<div class="btn-group">
+			<button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+				aria-expanded="false">
+				Action
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Action</a></li>
+				<li><a class="dropdown-item" href="#">Another action</a></li>
+				<li><a class="dropdown-item" href="#">Something else here</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">Separated link</a></li>
+			</ul>
+		</div>
+
+
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			FINALIZAR COMPRA
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+			aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="staticBackdropLabel">Confirmação de compra</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Deseja finalizar sua compra?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+						<button type="button" class="btn btn-primary">Finalizar Compra</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination">
+			<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">Proximo</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<div class="spinner-border text-primary" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-secondary" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-success" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-danger" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-warning" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-info" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-light" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-border text-dark" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="spinner-grow text-primary" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-secondary" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-success" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-danger" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-warning" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-info" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-light" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+		<div class="spinner-grow text-dark" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+
+	<div class="container">
+		<button class="btn btn-primary" type="button" disabled>
+			<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+			<span class="visually-hidden">Loading...</span>
+		</button>
+		<button class="btn btn-primary" type="button" disabled>
+			<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+			Loading...
+		</button>
+
+		<button class="btn btn-primary" type="button" disabled>
+			<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+			<span class="visually-hidden">Loading...</span>
+		</button>
+		<button class="btn btn-primary" type="button" disabled>
+			<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+			Loading...
+		</button>
+	</div>
+
+
+	<div class="container">
+
+	</div>
+
+
+
+
+
+
+
+	
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!--LINK BOOTSTRAP-->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+	<!-- BOOTSTRAP ICONS-->
+	<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+	<style>
+		body {
+			background: black;
+			color: white;
+		}
+
+		.scrollSpy {
+			height: 472px;
+			overflow: auto;
+			position: relative;
+			font-size: 30px;
+		}
+	</style>
+	<title>aula 13 -scroll Spy</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row pt-5">
+			<div class="col-3">
+				<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+					<a class="navbar-brand" href="#">Navbar</a>
+					<nav class="nav nav-pills flex-column">
+						<a class="nav-link" href="#item-1">Item 1</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+							<a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+						</nav>
+						<a class="nav-link" href="#item-2">Item 2</a>
+						<a class="nav-link" href="#item-3">Item 3</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+							<a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+						</nav>
+						<a class="nav-link" href="#item-4">Item 4</a>
+						<nav class="nav nav-pills flex-column">
+							<a class="nav-link ms-3 my-1" href="#item-4-1">Item 4-1</a>
+						</nav>
+
+					</nav>
+				</nav>
+			</div>
+			<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0"
+				class="col-9 scrollSpy">
+				<h4 id="item-1">Item 1</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+
+				<h5 id="item-1-1">Item 1-1</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+				<h5 id="item-1-2">Item 1-2</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+				<h4 id="item-2">Item 2</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+				<h4 id="item-3">Item 3</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+				<h5 id="item-3-1">Item 3-1</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+				<h5 id="item-3-2">Item 3-2</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+				<h4 id="item-4">WAGNER LUIZ</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eaque perferendis quia maiores optio
+					repellat doloremque minus animi, quasi odio veniam facilis nulla ratione dicta sed dolor iste nobis
+					exercitationem ullam tempora neque, aspernatur placeat! Excepturi deleniti eos ipsam quos
+					perspiciatis hic aperiam perferendis minus ut unde, quibusdam pariatur odit provident aliquid.
+					Explicabo tempore similique aliquam voluptates facere libero ipsum deserunt voluptatem atque tempora
+					harum dolor quam quidem molestias illum accusamus, consequuntur, unde suscipit quisquam iure
+					maiores! Quia consequatur debitis ea! Porro corporis in debitis animi minus repudiandae, dolores
+					voluptatum veniam labore doloremque earum perspiciatis deserunt maxime dolor, tenetur eaque ex
+					doloribus perferendis et non voluptatibus. Hic dignissimos magni at dolorem possimus nulla modi
+					quibusdam! Magnam a ab ipsa illum delectus, exercitationem culpa itaque praesentium cumque,
+					consequatur laudantium aliquam nemo adipisci odio ut molestiae, expedita in totam repudiandae autem.
+					Officia et similique praesentium ipsa veniam ducimus quos cumque laboriosam? Distinctio debitis
+					accusamus accusantium non quidem omnis error ipsum labore enim saepe, rem at. Praesentium possimus
+					quae adipisci vitae pariatur placeat ipsa, ullam odio, itaque soluta nobis, hic sint. Ipsam
+					possimus, iste sed illo reiciendis explicabo perferendis, quis itaque aspernatur nostrum, dolorem
+					velit quod. Voluptas doloribus similique perspiciatis, explicabo maiores dolor.</p>
+				<h5 id="item-4-1">Item 4 - 1</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptatem rerum quae omnis
+					facilis vitae magnam qui? Ipsa voluptatem enim officiis beatae at ea eos praesentium facere, nihil
+					reiciendis officia ex, voluptatibus porro labore consequatur et inventore. Nihil sunt sed esse
+					blanditiis sapiente? Temporibus laudantium, itaque eveniet voluptas reiciendis voluptatum.</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		var scrollSpy = new bootstrap.ScrollSpy( document.body, {
+			target: '#navbar-example'
+		} )
+	</script>
+</body>
+
+</html>
