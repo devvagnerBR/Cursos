@@ -19,9 +19,17 @@ console.log( consultaCEP )
 
 
 async function buscaEndereco() {
-    const consultaCEP = await fetch( `https://viacep.com.br/ws/28890401/json` )
-    const consultaCEPJSON = await consultaCEP.json()
-    console.log( consultaCEPJSON );
+
+    try {
+        const consultaCEP = await fetch( `https://viacep.com.br/ws/01001250/json` )
+        const consultaCEPJSON = await consultaCEP.json()
+        if ( consultaCEPJSON.erro ) {
+            throw Error( `CEP não encontrado!` )
+        }
+        console.log( consultaCEPJSON );
+    } catch ( erro ) {
+        console.log( erro );
+    }
 }
 
 
