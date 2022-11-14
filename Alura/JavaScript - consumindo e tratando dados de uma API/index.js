@@ -38,7 +38,7 @@ buscaEndereco()
 
 */
 
-async function buscaEndereco( cep = '28890401' ) {
+async function buscaEndereco( cep ) {
 
     try {
         const consultaCEP = await fetch( `https://viacep.com.br/ws/${cep}/json` )
@@ -54,4 +54,7 @@ async function buscaEndereco( cep = '28890401' ) {
 }
 
 
-buscaEndereco()
+
+var cep = document.getElementById( 'cep' )
+cep.addEventListener( 'focusout', () => buscaEndereco( cep.value ) )
+
