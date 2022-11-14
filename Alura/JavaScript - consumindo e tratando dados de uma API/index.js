@@ -46,6 +46,16 @@ async function buscaEndereco( cep ) {
         if ( consultaCEPJSON.erro ) {
             throw Error( `CEP não encontrado!` )
         }
+        const cidade = document.getElementById( 'cidade' )
+        const logradouro = document.getElementById( 'endereco' )
+        const estado = document.getElementById( 'estado' )
+        const bairro = document.getElementById( 'bairro' )
+
+        cidade.value = consultaCEPJSON.localidade
+        logradouro.value = consultaCEPJSON.logradouro
+        estado.value = consultaCEPJSON.uf
+        bairro.value = consultaCEPJSON.bairro
+        
         console.log( consultaCEPJSON );
         return consultaCEPJSON
     } catch ( erro ) {
