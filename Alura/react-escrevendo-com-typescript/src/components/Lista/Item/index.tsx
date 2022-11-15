@@ -8,7 +8,15 @@ const Item = ( { tarefa, tempo }: { tarefa: string, tempo: string } ) => {
             <span>{tempo}</span>
         </li>
     )
-
 }
 
 export default Item
+
+
+
+
+
+
+
+
+
