@@ -8,7 +8,7 @@ class Formulario extends React.Component {
             <form className={style.novaTarefa}>
                 <div className={style.inputContainer}>
                     <label htmlFor='tarefa'>
-                        Adicione um novo  
+                        Adicione um novo
                     </label>
                     <input
                         type='text'
@@ -32,7 +32,7 @@ class Formulario extends React.Component {
                         max="01:30:00"
                         required
                     />
-                    <Botao />
+                    <Botao>ADICIONAR</Botao>
                 </div>
 
             </form>
