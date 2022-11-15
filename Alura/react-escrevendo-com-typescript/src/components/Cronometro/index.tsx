@@ -18,7 +18,15 @@ const Cronometro = ( { selecionado }: Props ) => {
         }
     }, [selecionado] )
 
+    const regressiva = ( contador: number = 0 ) => {
+        setTimeout( () => {
+            if ( contador > 0 ) {
+                setTempo( contador - 1 )
+                return regressiva( contador - 1 )
+            }
 
+        }, 1000 )
+    }
 
     return (
         <div className={style.cronometro}>
@@ -26,8 +34,8 @@ const Cronometro = ( { selecionado }: Props ) => {
             <div className={style.relogioWrapper}>
                 <Relogio tempo={tempo} />
             </div>
-            <Botao>COMEÇAR</Botao>
-        </div>
+            <Botao onClick={() => regressiva( tempo )}>COMEÇAR</Botao>
+        </div >
     )
 }
 

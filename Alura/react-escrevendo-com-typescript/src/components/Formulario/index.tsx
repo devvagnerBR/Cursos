@@ -4,70 +4,76 @@ import Botao from '../Botao'
 import style from './Formulario.module.scss'
 import { v4 as uuidv4 } from 'uuid'
 
-class Formulario extends React.Component<{
-    setTarefas: React.Dispatch<React.SetStateAction<Itarefa[]>>
-}> {
 
-    state = {
-        tarefa: '',
-        tempo: ''
-    }
-    AdicionarTarefa( event: React.FormEvent<HTMLFormElement> ) {
+
+interface Props {
+    setTarefas: React.Dispatch<React.SetStateAction<Itarefa[]>>
+}
+const Formulario = ( { setTarefas }: Props ) => {
+
+    const [tarefa, setTarefa] = React.useState( '' )
+    const [tempo, setTempo] = React.useState( '00:00' )
+
+    const AdicionarTarefa = ( event: React.FormEvent<HTMLFormElement> ) => {
         event.preventDefault()
-        this.props.setTarefas( tarefasAntigas =>
+        setTarefas( tarefasAntigas =>
             [
                 ...tarefasAntigas,
                 {
-                    ...this.state,
+                    tarefa,
+                    tempo,
                     selecionado: false,
                     completado: false,
                     id: uuidv4()
                 }
             ]
         )
-        this.setState( { tarefa: '', tempo: '' } )
+        setTarefa( '' )
+        setTempo( '00:00' )
     }
+    return (
+        <form onSubmit={AdicionarTarefa} className={style.novaTarefa}>
+            <div className={style.inputContainer}>
+                <label htmlFor='tarefa'>
+                    Adicione um novo
+                </label>
+                <input
+                    type='text'
+                    name='tarefa'
+                    value={tarefa}
+                    onChange={( e ) => setTarefa( e.target.value )}
+                    id='tarefa'
+                    placeholder='O que vê quer estudar'
+                    required
+                />
+            </div>
 
-    render() {
-        return (
-            <form onSubmit={this.AdicionarTarefa.bind( this )} className={style.novaTarefa}>
-                <div className={style.inputContainer}>
-                    <label htmlFor='tarefa'>
-                        Adicione um novo
-                    </label>
-                    <input
-                        type='text'
-                        name='tarefa'
-                        value={this.state.tarefa}
-                        onChange={( e ) => this.setState( { ...this.state, tarefa: e.target.value } )}
-                        id='tarefa'
-                        placeholder='O que vê quer estudar'
-                        required
-                    />
-                </div>
+            <div className={style.inputContainer}>
+                <label htmlFor='tempo'>
+                    Tempo
+                </label>
 
-                <div className={style.inputContainer}>
-                    <label htmlFor='tempo'>
-                        Tempo
-                    </label>
+                <input
+                    type='time'
+                    step='1'
+                    name='tempo'
+                    value={tempo}
+                    onChange={( e ) => setTempo( e.target.value )}
+                    id='tempo'
+                    min="00:00:00"
+                    max="01:30:00"
+                    required
+                />
+                <Botao type={`submit`}>ADICIONAR</Botao>
+            </div>
 
-                    <input
-                        type='time'
-                        step='1'
-                        name='tempo'
-                        value={this.state.tempo}
-                        onChange={( e ) => this.setState( { ...this.state, tempo: e.target.value } )}
-                        id='tempo'
-                        min="00:00:00"
-                        max="01:30:00"
-                        required
-                    />
-                    <Botao type={`submit`}>ADICIONAR</Botao>
-                </div>
-
-            </form>
-        )
-    }
+        </form>
+    )
 }
+
+
+
+
+
 
 export default Formulario
