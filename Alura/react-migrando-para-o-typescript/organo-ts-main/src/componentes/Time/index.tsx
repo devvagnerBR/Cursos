@@ -1,6 +1,6 @@
-import { IColaborador } from '../../shared/interfaces/IColaborador'
 import Colaborador from '../Colaborador'
 import './Time.css'
+import { IColaborador } from './../../shared/interfaces/IColaborador';
 
 interface TimeProps {
     corPrimaria: string
@@ -8,9 +8,7 @@ interface TimeProps {
     nome: string
     colaboradores: IColaborador[]
 }
-const name = () => {
 
-}
 const Time = ( props: TimeProps ) => {
     const css = { backgroundColor: props.corSecundaria }
 
@@ -27,7 +25,7 @@ const Time = ( props: TimeProps ) => {
                     /> )}
             </div>
         </section>
-            : ''
+            : <></>
     )
 }
 

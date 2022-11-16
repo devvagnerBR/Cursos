@@ -1,6 +1,5 @@
-import { Interface } from 'readline'
 import './Banner.css'
-import React from 'react'
+
 
 interface BannerProps {
     enderecoImagem: string
