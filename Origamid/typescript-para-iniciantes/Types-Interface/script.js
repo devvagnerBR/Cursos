@@ -41,4 +41,4 @@ function pintarCategoria(categoria) {
         throw (`: Preencha com uma categoria válida`);
 }
 pintarCategoria('design'); // design
-pintarCategoria('teste'); // Preencha com uma categoria válida
+//pintarCategoria( 'teste' ) // Preencha com uma categoria válida

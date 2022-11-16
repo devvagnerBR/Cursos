@@ -6,13 +6,13 @@ total = '30'
 
 //Aula
 
-type Produto = {
+interface InterfaceProduto  {
     nome: string;
     preco: number;
     teclado: boolean
 }
 
-function preencherDados( dados: Produto ) {
+function preencherDados( dados: InterfaceProduto ) {
 
     document.body.innerHTML += `
         <div>
@@ -20,7 +20,7 @@ function preencherDados( dados: Produto ) {
         <h2>${dados.preco}</h2>
         <h2>Inclui teclado:  ${dados.teclado ? 'sim' : 'não'}</h2>
         </div>
-    `
+    ` 
 }
 
 //Ativando a função
@@ -41,7 +41,7 @@ preencherDados( {
 
 // Type
 
-const Celular: Produto = {
+const Celular: InterfaceProduto = {
     nome: 'Iphone 13 Pro Max',
     preco: 12000,
     teclado: false
@@ -61,4 +61,4 @@ function pintarCategoria( categoria: Categorias ) {
 }
 
 pintarCategoria( 'design' ) // design
-pintarCategoria( 'teste' ) // Preencha com uma categoria válida
+//pintarCategoria( 'teste' ) // Preencha com uma categoria válida
