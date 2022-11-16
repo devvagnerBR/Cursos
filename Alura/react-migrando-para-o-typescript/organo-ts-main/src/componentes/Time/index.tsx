@@ -8,6 +8,9 @@ interface TimeProps {
     nome: string
     colaboradores: IColaborador[]
 }
+const name = () => {
+
+}
 const Time = ( props: TimeProps ) => {
     const css = { backgroundColor: props.corSecundaria }
 
