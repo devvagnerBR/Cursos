@@ -1,14 +1,16 @@
 import './CampoTexto.css'
 
 interface CampoTextoProps {
-    aoAlterado: ( valor: string ) => void, // não retorna nada
+
+    aoAlterado: ( valor: string ) => void // não retorna nada
     placeholder: string
     label: string
     valor: string
     obrigatorio?: boolean
+    tipo?: 'text' | 'password' | 'date' | 'number'
 
 }
-const CampoTexto = ( { aoAlterado, label, placeholder, valor, obrigatorio = false }: CampoTextoProps ) => {
+const CampoTexto = ( { aoAlterado, label, placeholder, valor, obrigatorio = false, tipo = 'text' }: CampoTextoProps ) => {
 
     const placeholderModificada = `${placeholder}...`
 
@@ -25,7 +27,10 @@ const CampoTexto = ( { aoAlterado, label, placeholder, valor, obrigatorio = fals
                 value={valor}
                 onChange={aoDigitado}
                 required={obrigatorio}
-                placeholder={placeholderModificada} />
+                placeholder={placeholderModificada}
+                type={tipo}
+            />
+
         </div>
     )
 }
