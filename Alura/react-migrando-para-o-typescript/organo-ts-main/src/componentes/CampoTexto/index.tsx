@@ -2,7 +2,7 @@ import './CampoTexto.css'
 
 interface CampoTextoProps {
 
-    aoAlterado: ( valor: string ) => void // não retorna nada
+    aoAlterado: ( valor: string ) => void // não retorna nada!
     placeholder: string
     label: string
     valor: string
