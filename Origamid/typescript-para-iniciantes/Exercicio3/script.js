@@ -4,6 +4,7 @@ async function fetchProduct() {
     const data = await response.json();
     showProduct(data);
 }
+ 
 fetchProduct();
 function showProduct(data) {
     document.body.innerHTML = `
