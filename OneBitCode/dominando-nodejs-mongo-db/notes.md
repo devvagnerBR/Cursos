@@ -94,5 +94,14 @@ db.checklists.update({ name: "Primeiro CheckList" }, { name: "Minha checklist" }
 
 db.task.insertMany([{name: 'Preparar o café', done: false, checklistsId: ObjectId('638f52a4065aa5a96ab7aecc')}, {name: 'Ligar o notebook', done: true, checklistsId: ObjectId('638f52a4065aa5a96ab7aecc')}])
 
+db.checklists.aggregate({$lookup: {from: "task", localField: "\_id", foreignField: "checklistsId", as: "tasks"}}).pretty()
 
-db.checklists.aggregate({$lookup: {from: "task", localField: "_id", foreignField: "checklistsId", as: "tasks"}}).pretty()
+# OPERADORES
+
+db.task.find({$and: [{name: 'Preparar o café'}, {done: false}]}) // &&
+db.task.find({$or: [{name: 'Preparar o café'}, {done: false}]}) // ou
+db.task.find({checkListsId: {$exists: true}}) // existe
+
+# INSTALANDO MONGOOSE
+ 
+    npm install mongoose --save

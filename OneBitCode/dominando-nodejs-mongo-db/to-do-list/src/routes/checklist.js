@@ -1,4 +1,5 @@
-const express = require( 'express' )
+const express = require( 'express' );
+
 
 const router = express.Router()
 
@@ -9,11 +10,22 @@ router.get( '/', ( req, res ) => {
 } )
 
 
+const Checklist = require( '../models/checklist' )
 
 //Rota POST 
-router.post( '/', ( req, res ) => {
-    console.log( req.body ); // imprime o body no terminal
-    res.status( 200 ).json( req.body ) // retorna o status e o body para o usuário
+router.post( '/', async ( req, res ) => {
+    let { name } = req.body
+
+    try {
+
+        let checklist = await Checklist.create( { name } )
+        res.status( 200 ).json( checklist ) // retorna o status e o body para o usuário
+
+    } catch ( error ) {
+        
+        res.status( 422 ).json( error )
+    }
+
 } )
 
 
