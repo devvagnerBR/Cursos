@@ -6,7 +6,7 @@ Ex: GET/users - POST/users
 # STATUS REQUISIÇÕES
 
     - status(100) : são apenas respostas informativas ao cliente;
-    
+
     - status(200) : success;
 
     - status(300) : mensagem de redirecionamento;
@@ -19,3 +19,4 @@ Ex: GET/users - POST/users
 
     - status(500) : representam dados no servidor;
 
+// Montando um servidor HTTP
