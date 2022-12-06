@@ -30,7 +30,7 @@ Ex: GET/users - POST/users
 // Express
 
     - middlewares
-    - segue padrão Chain of Responsibility
+    - segue padrão Chain of Responsibility | cadeia de responsabilidade
 
 instalando: npm install express --save
 
