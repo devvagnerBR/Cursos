@@ -16,6 +16,8 @@ router.post( '/', ( req, res ) => {
     res.status( 200 ).json( req.body ) // retorna o status e o body para o usuário
 } )
 
+
+// Pegando task pela id
 router.get( '/:id', ( req, res ) => {
 
     console.log( req.params.id );
@@ -23,8 +25,21 @@ router.get( '/:id', ( req, res ) => {
     // (0bs:  se fosse :product teria que ser
     //req.params.product)
 
-    res.send( `ID: ${req.params.id}` )
+    res.send( `ID: ${req.params.id}` ) // retornando o id digitado para o usuário
 
 } )
+
+// Requisição PUT
+router.put( '/:id', ( req, res ) => {
+    console.log( req.body );
+    res.send( `PUT: ${req.params.id}` )
+} )
+
+// Requisição DELETE
+router.delete( '/:id', ( req, res ) => {
+    console.log( req.body );
+    res.send( `DELETE: ${req.params.id}` )
+} )
+
 
 module.exports = router // exportando as rotas

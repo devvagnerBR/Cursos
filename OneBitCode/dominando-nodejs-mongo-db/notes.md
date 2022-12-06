@@ -34,9 +34,65 @@ Ex: GET/users - POST/users
 
 instalando: npm install express --save
 
-# nodemom =  ele fica vigiando alteraçoes e atualiza em tempo real;
+# nodemom = ele fica vigiando alteraçoes e atualiza em tempo real;
 
     - instalando: npm install nodemon --save-dev
 
 # "dev": "nodemon"
 
+# MongoDB | Banco de dados relacionados a documentos. armazena documentos em formato similar a JSON'S que não precisam ter uma estrutura previamente definida
+
+    - são em formatos JavScript  .BSON
+
+# Why use MongoDb?
+
+    - Sem esquema fixo;
+    - Alta performance;
+    - Alta disponibilidade;
+    - Fácil escalabidade;
+
+# INSTALAÇÃO MongoDb
+
+# USANDO MONGODB
+
+    - terminal PowerShell :
+        mongod
+
+    - terminal mongosh : ENTER
+
+    - show dbs : monstra todos os bancos  de dados
+    - use todo-list :  começa a usar esse banco | ou cria caso não tenha
+
+    [CRIANDO A COLLECTION(TABLE)]
+
+    db.createCollection('checklists')
+
+    - show collections : mostra todas as COLLECTIONS(TABLES)
+
+    db.checklists.insert({name: 'Primeiro checklist', tasks: [{name: 'Tarefa 1', {name: 'Tarefa 2'}}]})
+                 .save : ambos fazem a  mesma coisa
+
+    db.checklists.find({name: 'Primeiro checklist'}) // busca por algo especifico
+
+    db.checklists.updateOne({name: 'Primeiro checklist'}, {$set: {name: 'Primeiro checklist :)))))) '}})
+
+db.checklists.updateOne({ \_Id: ObjectId("638f4a5f065aa5a96ab7aec9") }, {$set: { name: 'Primeiro CheckList haha' }}).
+
+db.checklists.updateOne({"\_id": 638f4a5f065aa5a96ab7aec9, "name": Primeiro Checklist }, {$set: {}})
+
+db.checklists.update({ name: "Primeiro CheckList" }, { name: "Minha checklist" })
+
+# ASSOCIAÇÕES
+
+    one-to-one
+    one-to-many
+    many-to-many
+
+# REFERÊNCIAS
+
+638f52a4065aa5a96ab7aecc
+
+db.task.insertMany([{name: 'Preparar o café', done: false, checklistsId: ObjectId('638f52a4065aa5a96ab7aecc')}, {name: 'Ligar o notebook', done: true, checklistsId: ObjectId('638f52a4065aa5a96ab7aecc')}])
+
+
+db.checklists.aggregate({$lookup: {from: "task", localField: "_id", foreignField: "checklistsId", as: "tasks"}}).pretty()
