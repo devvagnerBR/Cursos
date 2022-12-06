@@ -12,3 +12,7 @@
     npm install 
 
     para conseguir fazer importação add essa linha no [package.json] : 	"type": "module"
+
+# MONGOOSE
+    instalando mongoose:
+    npm install mongoose -D

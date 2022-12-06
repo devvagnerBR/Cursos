@@ -1,24 +1,40 @@
 import express from "express";
+import db from "./config/dbConnect.js";
+import livros from './models/Livro.js';
+import routes from './routes/index.js';
 
+// CONEXÃO COM O DB
+
+db.on( "error", console.log.bind( console, "Erro de conexão" ) )
+db.once( "open", () => {
+    console.log( `Conexão com o banco realizada com sucesso!` );
+} )
+
+
+// CONEXÃO COM O EXPRESS
 const app = express()
 app.use( express.json() ) // recurso para interpretar os dados recebidos
 
-const livros = [
+routes( app )
+// const livros = [
 
-    { id: 1, "titulo": "Senhor dos Aneis" },
-    { id: 2, "titulo": "O Hobbit" }
+//     { id: 1, "titulo": "Senhor dos Aneis" },
+//     { id: 2, "titulo": "O Hobbit" }
 
-]
-
-// GET
-app.get( '/', ( req, res ) => {
-    res.status( 200 ).send( 'Curso de Node' )
-} )
+// ]
 
 // GET
-app.get( '/livros', ( req, res ) => {
-    res.status( 200 ).json( livros )
-} )
+// app.get( '/', ( req, res ) => {
+//     res.status( 200 ).send( 'Curso de Node' )
+// } )
+
+// GET
+// app.get( '/livros', ( req, res ) => {
+//     livros.find( ( err, livros ) => {
+//         res.status( 200 ).json( livros )
+//     } ) // já pega todos os livros
+
+// } )
 
 // POST
 app.post( '/livros', ( req, res ) => {
@@ -29,7 +45,6 @@ app.post( '/livros', ( req, res ) => {
 } )
 
 // GET/:id
-
 app.get( '/livros/:id', ( req, res ) => {
 
     const searchBook = ( id ) => {
@@ -42,7 +57,6 @@ app.get( '/livros/:id', ( req, res ) => {
 } )
 
 // PUT
-
 app.put( '/livros/:id', ( req, res ) => {
 
     const searchBook = ( id ) => {
@@ -66,7 +80,7 @@ app.delete( '/livros/:id', ( req, res ) => {
     };
     let { id } = req.params;
     let index = searchBook( id )
-    
+
     livros.splice( index, 1 )
     res.send( `Livro ${id} removido com sucesso!` )
 
