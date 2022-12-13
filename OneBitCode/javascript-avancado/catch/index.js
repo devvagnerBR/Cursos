@@ -45,4 +45,4 @@ velocityAfter2Seconds( komodoShip.velocity, komodoShip.acceleration )
 
 
 console.log( `Execução de Promises` );
-console.log( komodoShip );
+console.log( komodoShip ); // resposta vinda do console.log
