@@ -6,7 +6,7 @@ function toNumber(value) {
     else if (typeof value === 'string')
         console.log(typeof value, Number(value));
     else
-        console.log(`Value deve ser um número ou uma string`);
+        console.log(`Value deve ser um número ou uma string`); // 
 }
 toNumber('21');
 // Origamid Resolução
